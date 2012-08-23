@@ -1,4 +1,4 @@
-﻿namespace MavenThought.MediaLibrary.Desktop.Poster
+namespace MavenThought.MediaLibrary.Desktop.Views.Poster
 {
     /// <summary>
     /// Interaction logic for PosterView.xaml

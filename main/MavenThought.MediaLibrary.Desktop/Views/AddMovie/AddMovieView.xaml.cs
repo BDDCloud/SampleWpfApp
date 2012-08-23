@@ -1,6 +1,4 @@
-﻿using MavenThought.MediaLibrary.Desktop.Tasks;
-
-namespace MavenThought.MediaLibrary.Desktop.AddMovie
+namespace MavenThought.MediaLibrary.Desktop.Views.AddMovie
 {
     /// <summary>
     /// Interaction logic for AddMovieView.xaml

@@ -5,12 +5,17 @@ using Castle.Windsor;
 using MavenThought.Commons.WPF.Events;
 using MavenThought.MediaLibrary.Core;
 using MavenThought.MediaLibrary.Core.Services;
-using MavenThought.MediaLibrary.Desktop.AddMovie;
-using MavenThought.MediaLibrary.Desktop.Contents;
-using MavenThought.MediaLibrary.Desktop.Poster;
-using MavenThought.MediaLibrary.Desktop.Reviews;
+
+using MavenThought.MediaLibrary.Desktop.Views.AddMovie;
+using MavenThought.MediaLibrary.Desktop.Views.Contents;
+using MavenThought.MediaLibrary.Desktop.Views.Poster;
+using MavenThought.MediaLibrary.Desktop.Views.Reviews;
 using MavenThought.MediaLibrary.Domain;
 using Microsoft.Practices.ServiceLocation;
+using AddMovieView = MavenThought.MediaLibrary.Desktop.Views.AddMovie.AddMovieView;
+using LibraryContentsView = MavenThought.MediaLibrary.Desktop.Views.Contents.LibraryContentsView;
+using PosterView = MavenThought.MediaLibrary.Desktop.Views.Poster.PosterView;
+using ReviewsView = MavenThought.MediaLibrary.Desktop.Views.Reviews.ReviewsView;
 
 namespace MavenThought.MediaLibrary.Desktop
 {

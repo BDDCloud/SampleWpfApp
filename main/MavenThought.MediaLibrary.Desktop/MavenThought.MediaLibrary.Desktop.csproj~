@@ -87,6 +87,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+<<<<<<< HEAD
+    <Compile Include="AddMovie\AddMovieViewModel.cs" />
+    <Compile Include="netfx\Contents\LibraryContentsView.xaml.cs">
+      <DependentUpon>LibraryContentsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="netfx\Contents\LibraryContentsViewModel.cs" />
+    <Compile Include="netfx\Contents\MovieViewModel.cs" />
+=======
+>>>>>>> Implemented delete selected movie
     <Compile Include="Critics\Darcy.cs" />
     <Compile Include="Critics\JaySherman.cs" />
     <Compile Include="Events\IMovieAdded.cs" />
@@ -115,7 +124,22 @@
     <Compile Include="Views\Reviews\ReviewsView.xaml.cs">
       <DependentUpon>ReviewsView.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Reviews\ReviewsViewModel.cs" />
+    <Compile Include="Tasks\RegisterHandlersTask.cs" />
+    <Compile Include="Registration.cs" />
+    <Compile Include="Tasks\ShowWindowTask.cs" />
+    <Page Include="AddMovie\AddMovieView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="netfx\Contents\LibraryContentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+=======
     <Compile Include="Views\Reviews\ReviewsViewModel.cs" />
+>>>>>>> Implemented delete selected movie
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

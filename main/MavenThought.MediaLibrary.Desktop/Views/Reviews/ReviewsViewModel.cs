@@ -6,7 +6,7 @@ using MavenThought.Commons.WPF.Events;
 using MavenThought.MediaLibrary.Desktop.Events;
 using MavenThought.MediaLibrary.Domain;
 
-namespace MavenThought.MediaLibrary.Desktop.Reviews
+namespace MavenThought.MediaLibrary.Desktop.Views.Reviews
 {
     /// <summary>
     /// Shows the reviews of all the critics

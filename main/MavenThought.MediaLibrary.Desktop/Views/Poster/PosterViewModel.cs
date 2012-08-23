@@ -9,7 +9,7 @@ using MavenThought.MediaLibrary.Desktop.Events;
 using MavenThought.MediaLibrary.Domain;
 using Microsoft.Practices.ServiceLocation;
 
-namespace MavenThought.MediaLibrary.Desktop.Poster
+namespace MavenThought.MediaLibrary.Desktop.Views.Poster
 {
     /// <summary>
     /// View model for posters
@@ -69,7 +69,7 @@ namespace MavenThought.MediaLibrary.Desktop.Poster
             UpdatePoster(@event.Movie);
         }
 
-        private async void UpdatePoster(IMovie movie)
+        private void UpdatePoster(IMovie movie)
         {
             IsBusy = true;
             try
@@ -82,7 +82,7 @@ namespace MavenThought.MediaLibrary.Desktop.Poster
 
                 if (!File.Exists(title))
                 {
-                    title = await TaskEx.Run(() => RetrievePosterAsync(movie.Title));
+                    title = RetrievePosterAsync(movie.Title);
                 }
 
                 SetPoster(title);

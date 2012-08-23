@@ -1,4 +1,4 @@
-﻿namespace MavenThought.MediaLibrary.Desktop.Reviews
+namespace MavenThought.MediaLibrary.Desktop.Views.Reviews
 {
     /// <summary>
     /// Interaction logic for ReviewsView.xaml

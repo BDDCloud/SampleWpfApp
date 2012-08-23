@@ -6,7 +6,7 @@ using MavenThought.MediaLibrary.Desktop.Events;
 using MavenThought.MediaLibrary.Desktop.netfx.System.Windows.Input;
 using MavenThought.MediaLibrary.Domain;
 
-namespace MavenThought.MediaLibrary.Desktop.AddMovie
+namespace MavenThought.MediaLibrary.Desktop.Views.AddMovie
 {
     /// <summary>
     /// View model to add movies
@@ -16,16 +16,17 @@ namespace MavenThought.MediaLibrary.Desktop.AddMovie
         public AddMovieViewModel(IMediaLibrary library, IEventAggregator eventAggregator)
         {
             this.Add = new DelegateCommand(() => AddMovie(library, eventAggregator));
+            this.Delete = new DelegateCommand(() => DeleteMovie(library, eventAggregator));
+            
         }
 
-        /// <summary>
-        /// Command to get or set the movie
-        /// </summary>
-        public ICommand Add { get; set; }
+        void DeleteMovie(IMediaLibrary library, IEventAggregator eventAggregator)
+        {
+            eventAggregator.Raise<ISelectedMovieDeleted>(e => {});
+        }
 
-        /// <summary>
-        /// Gets or sets the title of the movie
-        /// </summary>
+        public ICommand Delete { get; private set; }
+        public ICommand Add { get; private set; }
         public string Title { get; set; }
 
         /// <summary>
@@ -45,5 +46,6 @@ namespace MavenThought.MediaLibrary.Desktop.AddMovie
 
             eventAggregator.Raise<IMovieAdded>(evt => evt.Movie = movie);
         }
+
     }
 }

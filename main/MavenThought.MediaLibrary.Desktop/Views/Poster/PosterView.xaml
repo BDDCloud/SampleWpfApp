@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="MavenThought.MediaLibrary.Desktop.Poster.PosterView"
+<UserControl x:Class="MavenThought.MediaLibrary.Desktop.Views.Poster.PosterView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -14,6 +14,6 @@
             <BooleanToVisibilityConverter x:Key="boolToVisConverter"/>
         </Grid.Resources>
         <Image Width="200" Source="{Binding Poster}" Visibility="{Binding Path=IsNotBusy, Converter={StaticResource boolToVisConverter}}" />
-        <Image gif:ImageBehavior.AnimatedSource="../Images/countdown.gif" Visibility="{Binding Path=IsBusy, Converter={StaticResource boolToVisConverter}}" />
+        <Image gif:ImageBehavior.AnimatedSource="../../Images/countdown.gif" Visibility="{Binding Path=IsBusy, Converter={StaticResource boolToVisConverter}}" />
     </Grid>
 </UserControl>
