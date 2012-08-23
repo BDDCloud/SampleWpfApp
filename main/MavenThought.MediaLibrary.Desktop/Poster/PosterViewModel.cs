@@ -1,8 +1,13 @@
 using System.IO;
+using System.Net;
+using System.Threading.Tasks;
+using Bootstrap;
+using Castle.Windsor;
 using MavenThought.Commons.Events;
 using MavenThought.Commons.WPF.Events;
 using MavenThought.MediaLibrary.Desktop.Events;
 using MavenThought.MediaLibrary.Domain;
+using Microsoft.Practices.ServiceLocation;
 
 namespace MavenThought.MediaLibrary.Desktop.Poster
 {
@@ -11,15 +16,44 @@ namespace MavenThought.MediaLibrary.Desktop.Poster
     /// </summary>
     public class PosterViewModel : AbstractNotifyPropertyChanged, IHandleEventsOfType<IMovieAdded>, IHandleEventsOfType<IMovieSelected>
     {
+        private readonly IMoviePosterService _moviePosterService;
+        private readonly IFileDownloader _fileDownloader;
+        private bool _isBusy;
+
+        private const string BlankPoster = "images/_blank.bmp";
+
+
         public PosterViewModel()
+            :this(ServiceLocator.Current.GetInstance<IMoviePosterService>(), ServiceLocator.Current.GetInstance<IFileDownloader>())
         {
-            this.Poster = "../images/_blank.bmp";
+        }
+
+        public PosterViewModel(IMoviePosterService moviePosterService, IFileDownloader fileDownloader)
+        {
+            _moviePosterService = moviePosterService;
+            _fileDownloader = fileDownloader;
+            SetPoster(BlankPoster);
         }
 
         /// <summary>
         /// Gets or sets the poster of the movie
         /// </summary>
         public string Poster { get; set; }
+
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            private set { 
+                _isBusy = value;
+                OnPropertyChanged(() => IsBusy);
+                OnPropertyChanged(() => IsNotBusy);
+            }
+        }
+
+        public bool IsNotBusy
+        {
+            get { return !IsBusy; }
+        }
 
         /// <summary>
         /// Find the poster for the movie
@@ -35,22 +69,48 @@ namespace MavenThought.MediaLibrary.Desktop.Poster
             UpdatePoster(@event.Movie);
         }
 
-        private void UpdatePoster(IMovie movie)
+        private async void UpdatePoster(IMovie movie)
         {
-            var title = string.Format("images/{0}.jpg", movie
-                                                           .Title
-                                                           .Trim()
-                                                           .ToLower()
-                                                           .Replace(" ", string.Empty));
-
-            if (!File.Exists(title))
+            IsBusy = true;
+            try
             {
-                title = "images/_blank.bmp";
+                var title = string.Format("images/{0}.jpg", movie
+                                                          .Title
+                                                          .Trim()
+                                                          .ToLower()
+                                                          .Replace(" ", string.Empty));
+
+                if (!File.Exists(title))
+                {
+                    title = await TaskEx.Run(() => RetrievePosterAsync(movie.Title));
+                }
+
+                SetPoster(title);
             }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
 
-            this.Poster = string.Format("../{0}", title);
+        private string RetrievePosterAsync(string movieTitle)
+        {
+            var moviePoster = _moviePosterService.GetMoviePoster(movieTitle);
+            if (moviePoster.MovieTitle.Equals("N/A"))
+            {
+                return BlankPoster;
+            }
+            var title = string.Format("images/{0}.jpg", movieTitle.Trim().ToLower().Replace(" ", string.Empty));
+            _fileDownloader.DownloadFile(moviePoster.Url, title);
+            return title;
+        }
 
+        private void SetPoster(string title)
+        {
+            this.Poster = new FileInfo(title).FullName;
             this.OnPropertyChanged(() => Poster);
         }
     }
+
+   
 }

@@ -62,6 +62,9 @@
     <Reference Include="MavenThought.Commons.WPF">
       <HintPath>..\..\packages\maventhought.commons.0.9.3\lib\MavenThought.Commons.WPF.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CompilerServices.AsyncTargetingPack.Net4">
+      <HintPath>..\..\packages\Microsoft.CompilerServices.AsyncTargetingPack.1.0.0\lib\net40\Microsoft.CompilerServices.AsyncTargetingPack.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -75,6 +78,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif">
+      <HintPath>..\..\packages\WpfAnimatedGif.1.0\lib\WpfAnimatedGif.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -82,15 +88,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AddMovie\AddMovieViewModel.cs" />
-    <Compile Include="Contents\LibraryContentsView.xaml.cs">
+    <Compile Include="netfx\Contents\LibraryContentsView.xaml.cs">
       <DependentUpon>LibraryContentsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Contents\LibraryContentsViewModel.cs" />
-    <Compile Include="Contents\MovieViewModel.cs" />
+    <Compile Include="netfx\Contents\LibraryContentsViewModel.cs" />
+    <Compile Include="netfx\Contents\MovieViewModel.cs" />
     <Compile Include="Critics\Darcy.cs" />
     <Compile Include="Critics\JaySherman.cs" />
     <Compile Include="Events\IMovieAdded.cs" />
     <Compile Include="Events\IMovieSelected.cs" />
+    <Compile Include="FileDownloader.cs" />
     <Compile Include="netfx\System\Guard.cs" />
     <Compile Include="netfx\System\Windows\Input\DelegateCommand.cs" />
     <Compile Include="ILibraryView.cs" />
@@ -109,7 +116,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Contents\LibraryContentsView.xaml">
+    <Page Include="netfx\Contents\LibraryContentsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,6 +186,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\CanadianBacon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\countdown.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\thearmyofdarkness.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\_blank.bmp">

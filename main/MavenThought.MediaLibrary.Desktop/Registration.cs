@@ -4,6 +4,7 @@ using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using MavenThought.Commons.WPF.Events;
 using MavenThought.MediaLibrary.Core;
+using MavenThought.MediaLibrary.Core.Services;
 using MavenThought.MediaLibrary.Desktop.AddMovie;
 using MavenThought.MediaLibrary.Desktop.Contents;
 using MavenThought.MediaLibrary.Desktop.Poster;
@@ -18,6 +19,12 @@ namespace MavenThought.MediaLibrary.Desktop
         public void Register(IWindsorContainer container)
         {
             container.Register(
+                Component
+                    .For<IFileDownloader>()
+                    .ImplementedBy<FileDownloader>(),
+                Component
+                    .For<IMoviePosterService>()
+                    .ImplementedBy<TheMovieDbService>(),
                 Component
                     .For<IMediaLibrary>()
                     .ImplementedBy<MovieLibrary>()

@@ -9,7 +9,7 @@ namespace MavenThought.MediaLibrary.Desktop.Tasks
     {
         public void Run()
         {
-            var container = (IWindsorContainer) Bootstrapper.GetContainer();
+            var container = (IWindsorContainer)Bootstrapper.GetContainer();
 
             var ea = container.Resolve<IEventAggregator>();
 

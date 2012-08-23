@@ -1,0 +1,16 @@
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\obj\Debug\MavenThought.MediaLibrary.Functional.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Functional.Tests.dll
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Functional.Tests.pdb
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\Gallio.dll
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\Gallio40.dll
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Core.dll
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Domain.dll
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MbUnit.dll
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MbUnit40.dll
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\WatTmdb.dll
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\RestSharp.dll
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Core.pdb
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Domain.pdb
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\WatTmdb.pdb
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\obj\Debug\MavenThought.MediaLibrary.Functional.Tests.dll
+C:\Users\Craig\Documents\GitHub\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\obj\Debug\MavenThought.MediaLibrary.Functional.Tests.pdb

@@ -1,17 +1,15 @@
 source :rubygems
 
-group :base do
-	gem 'albacore'
-	gem 'git'
-end
-
-group :testing do
+group :runtime do
 end
 
 group :dev do
 end
 
-group :runtime do
-	#so far all the version are from lib2
+group :setup do
+	gem 'albacore'
+	gem 'git'
 end
 
+group :tools do
+end
