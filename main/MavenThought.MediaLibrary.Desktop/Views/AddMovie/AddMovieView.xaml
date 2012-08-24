@@ -13,6 +13,30 @@
         <Button Width="100" HorizontalAlignment="Left"
                 Command="{Binding Add}">Add</Button>
         <Button Width="100" HorizontalAlignment="Left"
-                Command="{Binding Path=Delete}" Content="Delete" />
+                Command="{Binding Path=DeleteDialog}" Content="Delete" />
+        
+        <Popup Name="DeleteConfirmation" Width="500" Height="100" Placement="Center" IsEnabled="True" IsOpen="{Binding Path=DeleteDialogOpen}">
+            <Border BorderBrush="DarkBlue" BorderThickness="4">
+                <StackPanel Background="WhiteSmoke" VerticalAlignment="Center" Height="100">
+                    <Grid Margin="5 5 5 5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250" />
+                            <ColumnDefinition Width="250" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.ColumnSpan="2" Grid.Row="0" FontFamily="Verdana" FontSize="15" FontWeight="Bold" 
+                               HorizontalAlignment="Center" VerticalAlignment="Center" Content="Are you sure you wish to delete the selected movie?" />
+                        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" 
+                                Width="60" Height="25" Content="YES" Margin="0 0 5 0" Command="{Binding Delete}"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" 
+                                Width="60" Height="25" Content="NO" Margin="5 0 0 0" Command="{Binding CancelDelete}"/>
+                    </Grid>
+                     
+                </StackPanel>
+            </Border>
+        </Popup>
     </StackPanel>
 </UserControl>

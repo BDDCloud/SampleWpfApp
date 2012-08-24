@@ -30,3 +30,15 @@ C:\Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\Wa
 C:\Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\obj\Debug\MavenThought.MediaLibrary.Functional.Tests.dll
 C:\Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\obj\Debug\MavenThought.MediaLibrary.Functional.Tests.pdb
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Functional.Tests.dll
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Functional.Tests.pdb
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Core.dll
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Domain.dll
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\WatTmdb.dll
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\RestSharp.dll
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Core.pdb
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\MavenThought.MediaLibrary.Domain.pdb
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\bin\Debug\WatTmdb.pdb
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\obj\Debug\MavenThought.MediaLibrary.Functional.Tests.csprojResolveAssemblyReference.cache
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\obj\Debug\MavenThought.MediaLibrary.Functional.Tests.dll
+C:\Users\rkhaddaj\Documents\Test Projects\SampleWpfApp\MavenThought.MediaLibrary.Functional.Tests\obj\Debug\MavenThought.MediaLibrary.Functional.Tests.pdb
